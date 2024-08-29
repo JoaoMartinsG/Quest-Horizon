@@ -18,6 +18,8 @@
 
 body {
   color: rgb(var(--foreground-rgb));
+  width: 100vw;
+  @apply p-10;
   background: linear-gradient(
       to bottom,
       transparent,

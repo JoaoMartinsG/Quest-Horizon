@@ -1,0 +1,14 @@
+.card {
+  @apply grid grid-rows-10;
+  max-width: 300px;
+  height: 400px;
+  background: #07182E;
+  overflow: hidden;
+  border-radius: 20px;
+  margin: .5rem;
+}
+
+.cardImg {
+  @apply grid grid-rows-subgrid row-span-7 relative;
+
+}
