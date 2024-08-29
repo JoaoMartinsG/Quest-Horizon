@@ -7,16 +7,28 @@ interface CardProps {
   title: string;
   imageUrl: string;
   slug: string;
+  metacritic: number;
 }
 
-const Card: React.FC<CardProps> = ({ title, imageUrl, slug }) => {
+const Card: React.FC<CardProps> = ({ title, imageUrl, slug, metacritic }) => {
   return (
     <>
       <Link href={`/games/${slug}`} className={styles.card}>
         <div className={styles.cardImg}>
-          <Image src={imageUrl} fill alt={title} className="object-cover" />
+          <Image src={imageUrl} fill alt={title} className={styles.img} />
         </div>
-        <h2>{title}</h2>
+        <div className={styles.gameInfo}>
+          <p>{title}</p>
+          <p
+            className={`${
+              metacritic >= 90
+                ? `bg-green-700 ${styles.metascore}`
+                : `bg-red-600 ${styles.metascore}`
+            }`}
+          >
+            {metacritic}
+          </p>
+        </div>
       </Link>
     </>
   );

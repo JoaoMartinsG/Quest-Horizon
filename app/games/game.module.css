@@ -1,8 +1,11 @@
 .gamesContainer{
   @apply
-    p-20
+    p-10
     bg-opacity-25
-    bg-gradient-to-br from-blue-500/40 to-rose-600/60
+    /* bg-gradient-to-br from-blue-500/40 to-rose-600/60 */
     w-full
     rounded-lg
+    grid
+    grid-cols-3
+    gap-3
 }

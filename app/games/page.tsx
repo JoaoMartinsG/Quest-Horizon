@@ -9,26 +9,30 @@ interface RawgGamesResponse {
     slug: string;
     name: string;
     background_image: string;
+    metacritic: number;
   }[];
 }
 
 const GamePage = async () => {
   const { data } = await rawg.get<RawgGamesResponse>("/games", {
     params: {
-      page_size: 30,
+      page_size: 15,
     },
   });
   const games = data.results;
 
+
+
   return (
     <>
-      <div className={`grid grid-cols-5 gap-1 ${styles.gamesContainer}`}>
+      <div className={` ${styles.gamesContainer}`}>
         {games.map((game) => (
           <Card
             key={game.id}
             title={game.name}
             imageUrl={game.background_image}
             slug={game.slug}
+            metacritic={game.metacritic}
           ></Card>
         ))}
       </div>

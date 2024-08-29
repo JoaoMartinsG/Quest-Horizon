@@ -1,14 +1,40 @@
 .card {
-  @apply grid grid-rows-10;
-  max-width: 300px;
-  height: 400px;
-  background: #07182E;
-  overflow: hidden;
-  border-radius: 20px;
-  margin: .5rem;
+  @apply grid
+  grid-rows-10
+  min-h-72
+  overflow-hidden
+  m-2
+  rounded-3xl
 }
 
 .cardImg {
-  @apply grid grid-rows-subgrid row-span-7 relative;
+  @apply grid
+  grid-rows-subgrid
+  row-span-10
+  relative
+  mb-3
+  hover:scale-105 transition ease-in-out duration-300
+}
 
+.img{
+  @apply
+  object-cover
+  object-top
+  rounded-3xl
+  shadow-2xl
+}
+
+.gameInfo{
+  @apply
+  mx-3
+  flex
+  justify-between
+}
+
+.metascore{
+  @apply
+  text-white
+  px-2
+  py-1
+  rounded-lg
 }

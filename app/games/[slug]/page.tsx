@@ -14,6 +14,10 @@ const GamePage = async ({ params }: { params: { slug: string } }) => {
   const { data } = await rawg.get<RawgGamesResponse>(`/games/${params.slug}`);
   const gameData = data;
 
+  console.log(gameData);
+
+
+
   return (
     <>
       <h1>{gameData.name}</h1>
