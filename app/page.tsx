@@ -1,14 +1,28 @@
 import Link from "next/link";
 import styles from "./homepage.module.css";
-
+import Image from "next/image";
 
 export default function Home() {
   return (
     <>
-      <h1>Home Page</h1>
-      <h2 className={styles.main}>
-        <Link href="/games">Games <span>{">"}</span></Link>
-      </h2>
+      <main className={styles.main}>
+        <div className={styles.banner}>
+          <Image
+            src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            fill
+            alt={"banner"}
+            className={styles.bannerImg}
+          />
+        </div>
+
+        <div className={styles.mainContainer}>
+          <h2>
+            <Link href="/games">
+              Games <span>{">"}</span>
+            </Link>
+          </h2>
+        </div>
+      </main>
     </>
   );
 }

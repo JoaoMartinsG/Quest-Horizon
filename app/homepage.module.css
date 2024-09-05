@@ -1,12 +1,25 @@
-.main {
+.banner{
+  max-height: 10px;
+}
+
+.bannerImg{
+}
+
+
+.mainContainer{
+  @apply
+  p-64
+}
+.main h2{
   @apply
   text-3xl
-  font-semibold
+  font-bold
 }
 
 .main span{
   @apply
   text-gray-600
+  font-semibold
 }
 
 .main:hover span{
