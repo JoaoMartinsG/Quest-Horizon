@@ -23,7 +23,7 @@ const Card: React.FC<CardProps> = ({ title, imageUrl, slug, metacritic }) => {
             className={`${
               metacritic >= 90
                 ? `bg-green-700 ${styles.metascore}`
-                : `bg-red-600 ${styles.metascore}`
+                : `bg-yellow-400 ${styles.metascore}`
             }`}
           >
             {metacritic}

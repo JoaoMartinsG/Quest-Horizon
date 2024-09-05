@@ -21,21 +21,22 @@ const GamePage = async () => {
   });
   const games = data.results;
 
-
-
   return (
     <>
-      <div className={` ${styles.gamesContainer}`}>
-        {games.map((game) => (
-          <Card
-            key={game.id}
-            title={game.name}
-            imageUrl={game.background_image}
-            slug={game.slug}
-            metacritic={game.metacritic}
-          ></Card>
-        ))}
-      </div>
+      <div className="banner"></div>
+      <main className={styles.main}>
+        <div className={` ${styles.gamesContainer}`}>
+          {games.map((game) => (
+            <Card
+              key={game.id}
+              title={game.name}
+              imageUrl={game.background_image}
+              slug={game.slug}
+              metacritic={game.metacritic}
+            ></Card>
+          ))}
+        </div>
+      </main>
     </>
   );
 };

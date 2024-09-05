@@ -1,0 +1,18 @@
+.main {
+  @apply
+  text-3xl
+  font-semibold
+}
+
+.main span{
+  @apply
+  text-gray-600
+}
+
+.main:hover span{
+  @apply
+  text-white
+  transition
+  ease-in-out
+  duration-100
+}
