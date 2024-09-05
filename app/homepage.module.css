@@ -1,25 +1,35 @@
 .banner{
-  max-height: 10px;
+  @apply
+  relative
+  min-h-96
+  min-w-full;
 }
 
 .bannerImg{
+  @apply
+  object-cover
+  brightness-50
+  blur-sm
+  contrast-125
+  saturate-200;
 }
-
 
 .mainContainer{
   @apply
-  p-64
+  py-12
+  px-96;
 }
 .main h2{
   @apply
   text-3xl
-  font-bold
+  font-medium;
 }
 
 .main span{
   @apply
+  text-sm
   text-gray-600
-  font-semibold
+  font-semibold;
 }
 
 .main:hover span{
@@ -27,5 +37,5 @@
   text-white
   transition
   ease-in-out
-  duration-100
+  duration-100;
 }

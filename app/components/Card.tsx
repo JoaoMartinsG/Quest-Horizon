@@ -14,7 +14,7 @@ const Card: React.FC<CardProps> = ({ title, imageUrl, slug, metacritic }) => {
   return (
     <>
       <Link href={`/games/${slug}`} className={styles.card}>
-        <div className={styles.cardImg}>
+        <div className={styles.cardImgContainer}>
           <Image src={imageUrl} fill alt={title} className={styles.img} />
         </div>
         <div className={styles.gameInfo}>

@@ -17,10 +17,11 @@
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
+  /* color: rgb(var(--foreground-rgb)); */
+
   width: 100vw;
   height: 100VW;
-  @apply bg-gradient-to-bl from-zinc-800 to-blue-950;
+  @apply bg-gradient-to-bl from-zinc-800 to-blue-950 text-slate-100;
   background-size: 100% 100%;
 
 }
