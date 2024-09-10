@@ -32,7 +32,7 @@
   font-semibold;
 }
 
-.main:hover span{
+.main h2:hover span{
   @apply
   text-white
   transition

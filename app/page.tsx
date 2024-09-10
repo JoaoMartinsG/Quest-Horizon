@@ -2,6 +2,7 @@ import Link from "next/link";
 import styles from "./homepage.module.css";
 import Image from "next/image";
 import { ChevronRightIcon } from "@heroicons/react/16/solid";
+import Button from "./components/Button";
 
 export default function Home() {
   const url =
@@ -15,12 +16,8 @@ export default function Home() {
         </div>
 
         <div className={styles.mainContainer}>
-          <h2>
-            <Link href="/games">
-              Games <span><ChevronRightIcon/></span>
-            </Link>
-
-          </h2>
+          <Button title="Games"/>
+          <Button title="My List"/>
         </div>
       </main>
     </>

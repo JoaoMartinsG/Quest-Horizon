@@ -11,5 +11,5 @@
 }
 
 .main{
-  @apply p-60;
+  @apply px-60 ;
 }

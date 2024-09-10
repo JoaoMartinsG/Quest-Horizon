@@ -17,13 +17,13 @@ const GamePage = async () => {
   const { data } = await rawg.get<RawgGamesResponse>("/games", {
     params: {
       page_size: 15,
+      page: 2,
     },
   });
   const games = data.results;
 
   return (
     <>
-      <div className="banner"></div>
       <main className={styles.main}>
         <div className={` ${styles.gamesContainer}`}>
           {games.map((game) => (
@@ -36,6 +36,7 @@ const GamePage = async () => {
             ></Card>
           ))}
         </div>
+        <h1 className="flex justify-center">&lt; &lt;&lt; - &gt;&gt; &gt;</h1>
       </main>
     </>
   );
